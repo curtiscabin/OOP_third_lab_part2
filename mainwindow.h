@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "model.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -19,5 +20,13 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    model *M;
+
+public slots:
+    void slot();
+private slots:
+    void on_lineEdit_A_editingFinished();
+    void on_lineEdit_B_editingFinished();
+    void on_lineEdit_C_editingFinished();
 };
 #endif // MAINWINDOW_H
